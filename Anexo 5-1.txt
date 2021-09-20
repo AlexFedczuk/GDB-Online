@@ -1,0 +1,64 @@
+/******************************************************************************
+
+Armar un Menú de Opciones con las siguientes opciones
+1-Inicializar
+2-Cargar
+3-Mostrar
+4-Calcular Promedio
+5-Ordenar
+Al ingresar a cada opción del menú deberá imprimir en pantalla el nombre del mismo. Ej: Si se
+presiona la opción 1 mostrar por pantalla “Ud. ha seleccionado lo opción 1-Inicializar”
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int opcion;
+    
+    do{
+        do{
+            printf("\n1-Inicializar\n");
+            printf("2-Cargar\n");
+            printf("3-Mostar\n");
+            printf("4-Calcular Promedio\n");
+            printf("5-Ordenar\n");
+            printf("6-Salir\n");
+            printf("Ingrese opcion: ");
+            scanf("%d", &opcion);
+            
+            if(opcion < 1 || opcion > 6)
+            {
+                printf("\nError! Valor invalido ingresado.\nIngrese una opcion del Menu.\n");
+            }
+        }while(opcion < 1 || opcion > 6);
+        
+        
+        switch(opcion)
+        {
+            case 1:
+                printf("\nUd. ha seleccionado lo opción 1-Inicializar\n");
+                break;
+            case 2:
+                printf("\nUd. ha seleccionado lo opción 2-Cargar\n");
+                break;
+            case 3:
+                printf("\nUd. ha seleccionado lo opción 3-Mostar\n");
+                break;
+            case 4:
+                printf("\nUd. ha seleccionado lo opción 4-Calcular Promedio\n");
+                break;
+            case 5:
+                printf("\nUd. ha seleccionado lo opción 5-Ordenar\n");
+                break;
+            case 6:
+                printf("\nSaliendo...\n");
+                break;
+            default:
+                break;
+        }
+        //system("cls");
+    }while(opcion != 6);
+
+    return 0;
+}
